@@ -1,0 +1,244 @@
+/* //trouver une anim facile pour ouvrir les fenetres porte coulissante ?? 
+/*comment centrer la popup avec vw vh ?
+/* pour le rond du chiffre essayer de recommencer en faisant un fond carré par exp de 50px de côté y
+ appliquer bordr radius--> pas beau
+essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popup abec bordure
+
+*/
+html{
+  background-image: url("dessinnoel.jpg");
+  margin: 0%;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  
+}
+
+
+
+#fenetres {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+    align-items: center;
+  margin: 0%;
+  flex-wrap: wrap;
+}
+.fenetre{  /*mise en forme de la fenetre fermée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 5em;
+    height : 5em ;
+    border-top: 2px dotted white;
+    border-right: 2px dotted white;
+    border-bottom: 2px dotted white;
+    border-left: 2px solid white;
+    border-radius: 2px 4px 4px 2px;
+    
+    
+     margin: 5px;
+     padding: 5px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+  }
+  
+  .chiffre {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    flex-wrap: nowrap;
+    text-align: center;
+    /* line-height: 17px; */
+    width: 20px;
+    height: 20px;
+    color: red;
+    background: radial-gradient( at  80% 80%,  gold,rgb(240, 229, 166), white, gold );
+    border-radius: 50%;
+    padding: 8px;
+    box-shadow: 1px 2px 2px rgb(46, 36, 36);
+    
+
+  } 
+
+
+  .popuptext { /* mise en forme du texte à afficher*/
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 5vw;
+    font-size: x-large;
+    left: 50vh;
+    border-radius: 6px;
+    padding: 1em;
+    width: 50%;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    z-index: 3;
+   
+    /* bottom: 125%;
+    left: 50%;
+    margin-left: -80px; */
+  }
+  
+  .errorMessage { /* mise en forme du texte à afficher*/
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 5vw;
+    font-size: x-large;
+    left: 50vh;
+    border-radius: 6px;
+    padding: 8px 0;
+    width: 50%;
+    background-color: rgb(234, 187, 0);
+    color: rgb(255, 0, 0);
+    text-align: center;
+    z-index: 3;
+   
+    /* bottom: 125%;
+    left: 50%;
+    margin-left: -80px; */
+  }
+  .gingerman{
+    display: block;
+    position: fixed;
+    width: 100px;
+    height: 200px;
+    margin: 0px;
+    bottom: -36px;
+    left: -36px;
+    visibility: hidden;
+    background-image: url("gingerbread.png");
+    
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+  }
+
+  .show {
+    visibility: visible;
+    -webkit-animation: fadeInOut 2s; /* à rallonger qd projet fini */
+    animation: fadeInOut 5s forwards;
+  }
+
+  .afficheGinger{
+    visibility: visible;
+    
+    animation: gingerwheel 2s forwards;
+
+    
+  }
+
+  .afficheGingerError{
+    visibility: visible;
+    
+    animation: gingererror 2s  ease-in-out;
+
+    
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeInOut {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeInOut {
+    0% {opacity: 0;visibility: visible;}
+    
+    50% {opacity:1 ;visibility: visible;}
+
+    100% {opacity :1 ; visibility: hidden;} 
+  }
+  @keyframes clignote {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  @keyframes gingerwheel {
+    0% {transform: translateX(0px) ;visibility: visible}
+    25% {transform: translateX(100px) ;}
+    50% {transform: translateX(150px)translateY(-140px)rotate(90deg) ;}
+    75% {transform: translateX(200px)translateY(-100px)rotate(180deg) ;}
+    100% {transform: translateX(300px)translateY(0px)rotate(360deg); visibility: hidden;}
+  }
+  @keyframes gingererror {
+    0% {background-image: url("gingerbread.png"); width: 100px;height: 200px;}
+    50% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;}
+    60% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+      transform: translateY(-30px) rotate(20deg)}
+    67% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+        transform: translateY(-10px) rotate(-20deg);}
+    73% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+      transform: translateY(-30px) rotate(20deg);}
+    77% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+        transform: translateY(-10px) rotate(-20deg);}
+    87% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+      transform: translateY(-30px) rotate(20deg);}  
+    93% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+        transform: translateY(-10px)rotate(-20deg) ;}
+    100% {background-image: url("gingerbreaderror.png");width: 200px;height: 400px;
+      transform: translateY(-40px) rotate(0deg);}
+  }
+.transitionChiffre{
+  animation: clignote 2s;
+  background: radial-gradient( at  20% 20%,  gold,rgb(240, 229, 166), white, gold );
+}
+
+.superutilisateur{
+  
+display: block;
+position: fixed;
+bottom :2% ;
+left :5% ;
+background-color: grey;
+}
+
+
+
+.superutilisateur:hover{
+  background-color: cornflowerblue;
+}
+.superutilisateur:active{
+  background-color: rgb(255, 0, 0);
+}
+
+.superutilisateuractive{
+  background-color: rgb(255, 0, 0);
+}
+
+
+
+
+
+/* 
+    animation-name: monAnim;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; */
+
+
+/* 
+@keyframes monAnim {
+    0% {
+        background-color: black;
+    }
+    50% {
+        background-color: rgba(0, 0, 255, 0.474);
+    }
+    100% {
+        background-color: black;
+    }
+} */
+
