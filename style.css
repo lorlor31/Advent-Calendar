@@ -15,6 +15,7 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
 @media only screen and (orientation: landscape) {
   body {
     background-image: url("dessinnoel-portrait.jpg");
+    background-size: contain;
   }
 }
 body{
