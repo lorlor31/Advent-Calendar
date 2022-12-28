@@ -19,8 +19,11 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
   }
 
   .errorMessage { 
+    display: block;
+    position: fixed;
     left: 50%;
   transform: translate(-50%,-50%);
+  background-color: red;
   }
 
 }
