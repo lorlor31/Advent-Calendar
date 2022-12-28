@@ -19,7 +19,7 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
   }
 
   .errorMessage { 
-  transform: translate(-30%,-30%);
+  transform: translate(-10%,-10%);
   }
 
 }
