@@ -138,7 +138,7 @@ for(let i in tableauCartes) {
             else {
                 errorMessage.classList.add("show")
                 gingerman2.classList.add("afficheGingerError");
-                setTimeout(ràzGingermanerror, 3000) ;
+                setTimeout(ràzGingermanerror, 5000) ;
                 function ràzGingermanerror() { gingerman2.classList.remove("afficheGingerError");errorMessage.classList.remove("show") ;
                 }
                
