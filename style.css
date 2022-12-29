@@ -213,11 +213,11 @@ h1{
 
   @keyframes gingerwheel {
     0% {transform: translateX(0px) ;}
-    10% {transform: translateX(0px) ;}
-    25% {transform: translateX(100px) ;}
-    30% {transform: translateX(150px)translateY(-140px)rotate(90deg) ;}
-    45% {transform: translateX(200px)translateY(-100px)rotate(180deg) ;}
-    50% {transform: translateX(300px)translateY(0px)rotate(360deg); }
+    20% {transform: translateX(0px) ;}
+    35% {transform: translateX(100px) ;}
+    40% {transform: translateX(150px)translateY(-140px)rotate(90deg) ;}
+    55% {transform: translateX(200px)translateY(-100px)rotate(180deg) ;}
+    60% {transform: translateX(300px)translateY(0px)rotate(360deg); }
     100% {transform: translateX(1000px)translateY(0px)rotate(360deg); }
   }
   @keyframes gingererror {
