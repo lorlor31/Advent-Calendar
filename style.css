@@ -9,7 +9,7 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
 
 @font-face {
   font-family: "childish";
-  src: url(guard.ttf);
+  src: url(fonts/guard.ttf);
 }
 
 @media only screen and (orientation: landscape) {
