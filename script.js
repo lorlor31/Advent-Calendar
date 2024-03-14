@@ -1,7 +1,6 @@
 
 
 class carte {
-
     constructor (idPopup,titre, info) {
         this.idPopup=idPopup
         this.titre=titre ;
