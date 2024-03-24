@@ -10,12 +10,17 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
   font-family: "childish";
   src: url(fonts/guard.ttf);
 }
-
-@media only screen and (orientation: landscape) {
-  body {
-    background-image: url("images/dessinnoel-portrait.jpg");
-    background-size: contain;
-  }
+/* and (min-width: 768px) and (max-width: 1023px) and ( */
+/* @media screen and (orientation: portrait){
+/* @media only screen and (orientation: portrait) { */
+  /* body {
+    /* background-image: url("images/dessinnoel-portrait.jpg");
+    background-size: 50%; */
+    /* height: auto;
+    /* background-repeat: no-repeat;  
+    background-image: none;
+  
+  } 
 
   .errorMessage { 
     display: block;
@@ -25,21 +30,71 @@ essayer de faire un petit couettou au dessus en s inspirant du tuto pour la popu
   background-color: red;
   }
 
+} */ 
+/* //TODO REVERIFIER LES RESPOKNSIVE */
+@media screen and (min-width: 1024px) {
+
+    body{
+    background-image: url("images/dessinnoel.jpg");
+    margin: 0%;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: auto;
+  }
 }
-body{
-  
+
+@media screen and (max-width: 1023px) {
+/* { */
+  body {
+    background-image: url("images/dessinnoel.jpg");
+    margin: 0%;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) and (orientation : portrait) {
+  /* (orientation : portrait) { */
+    body {
+      background-image: url("images/dessinnoel-portrait.jpg");
+      margin: 0%;
+      background-position: center center;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      height: auto;
+    }
+  }
+
+
+/* ===============RESPONSIVE BCKGRD= image ok ms marges pas ok========================================== */
+/* body{
+  display : flex ;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 9/16 = 0.5625 (multiplié par 100 pourcentage) 
+  overflow: hidden;
+}
+
+#mainWrapper {
+  justify-content: center; 
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-image: url("images/dessinnoel.jpg");
-  margin: 0%;
+  background-size: cover;
   background-position: center center;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  height: auto;
-  
-}
-
+} */
+/* ================================================================================================ */
 h1{
-
   font-family: "childish", serif ;
   font-size: x-large;
 }
@@ -49,8 +104,14 @@ h1{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 0.5rem;
   flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  max-height: 95%;
 }
 
 
@@ -58,15 +119,15 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 6em;
-    height : 6em ;
+    width: 15%;
+    height : 18% ;
     border-top: 2px dotted white;
     border-right: 2px dotted white;
     border-bottom: 2px dotted white;
     border-left: 2px solid white;
-    border-radius: 2px 4px 4px 2px;
-    margin: 5px;
-    padding: 5px;
+    border-radius: 5px 30px 10px 2px;
+    margin: 2px;
+    padding: 3px;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
